@@ -1,0 +1,192 @@
+/* ==========================================================================
+   THE ROYAL EXPERIENCE — Animations & Micro-interactions
+   ========================================================================== */
+
+/* Fade & Slide In Entrance */
+@keyframes royalFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes royalFadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: royalFadeInUp var(--duration-slow) var(--ease-cinematic) forwards;
+}
+
+.animate-fade-in-scale {
+  animation: royalFadeInScale var(--duration-slow) var(--ease-cinematic) forwards;
+}
+
+/* Stagger Delay Utility Classes */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+/* Gentle Ethereal Floating */
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+/* Royal Starlight Twinkle */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Golden Aura Breathing */
+@keyframes auraPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--color-gold-glow);
+  }
+  50% {
+    box-shadow: 0 0 45px var(--color-gold-glow), 0 0 60px rgba(212, 175, 55, 0.2);
+  }
+}
+
+.animate-aura-pulse {
+  animation: auraPulse 4s ease-in-out infinite;
+}
+
+/* Scene Transition Director */
+.scene-container {
+  display: none;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s var(--ease-cinematic), transform 0.8s var(--ease-cinematic);
+  width: 100%;
+}
+
+.scene-container.active-scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scene Exit Transition */
+.scene-container.exiting-scene {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Text Shimmer Effect */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--color-ivory) 0%,
+    var(--color-gold-light) 30%,
+    var(--color-gold) 50%,
+    var(--color-ivory) 70%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 6s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Wax Seal Breaking Animation */
+@keyframes sealFracture {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    filter: brightness(1);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1.2);
+    filter: brightness(1.5) drop-shadow(0 0 20px #FFF);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0;
+  }
+}
+
+.breaking-seal {
+  animation: sealFracture 0.5s var(--ease-cinematic) forwards !important;
+}
+
+/* Coronation Sparkle Flash */
+@keyframes coronationBurst {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: drop-shadow(0 0 40px var(--color-gold));
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.coronation-reveal {
+  animation: coronationBurst 1.2s var(--ease-cinematic) forwards;
+}
+
+/* Reduced Motion Override for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-float,
+  .animate-twinkle,
+  .animate-aura-pulse,
+  .shimmer-text,
+  .audio-btn.playing .sound-wave span {
+    animation: none !important;
+  }
+}

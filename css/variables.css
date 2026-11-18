@@ -1,0 +1,126 @@
+/* ==========================================================================
+   THE ROYAL EXPERIENCE — Haute Couture Design System Tokens
+   Art-directed luxury: 300gsm cotton vellum, gold leaf foil, editorial typography
+   ========================================================================== */
+
+:root {
+  /* Brand Palette: Imperial High Royalty */
+  --color-gold-foil: #FBF2D5;
+  --color-gold-light: #F7E7CE;
+  --color-gold: #D4AF37;
+  --color-gold-rich: #C5A028;
+  --color-gold-dark: #7A5C14;
+  --color-gold-glow: rgba(212, 175, 55, 0.45);
+  --color-gold-subtle: rgba(212, 175, 55, 0.18);
+
+  --color-ivory: #FDFBF7;
+  --color-ivory-warm: #FAF6EE;
+  --color-ivory-dim: #E5DCCE;
+  --color-ivory-dark: #BAAEA0;
+
+  --color-rose-light: #FFE4E8;
+  --color-rose: #E8A598;
+  --color-rose-dark: #A85A65;
+  --color-rose-glow: rgba(232, 165, 152, 0.35);
+
+  --color-burgundy-imperial: #3A0710;
+  --color-burgundy-deep: #1A0307;
+  --color-burgundy-rich: #570D1B;
+
+  --color-lavender-light: #F2E4FA;
+  --color-lavender: #D8B4E2;
+  --color-lavender-dark: #8C5B9C;
+
+  --color-plum-void: #08020E;
+  --color-plum-deep: #10051B;
+  --color-plum-surface: #1B0A2E;
+  --color-plum-light: #2A1045;
+
+  /* Universal Semantic Tokens */
+  --bg-primary: var(--color-plum-void);
+  --bg-surface: rgba(16, 5, 27, 0.82);
+  --bg-surface-elevated: rgba(27, 10, 46, 0.88);
+  --bg-glass: rgba(253, 251, 247, 0.035);
+  --bg-glass-active: rgba(212, 175, 55, 0.08);
+
+  --text-primary: var(--color-ivory);
+  --text-secondary: #D9CEBF;
+  --text-muted: #9A8A7A;
+  --text-gold: var(--color-gold-light);
+  --text-accent: var(--color-rose);
+
+  --border-gold: rgba(212, 175, 55, 0.32);
+  --border-gold-subtle: rgba(212, 175, 55, 0.14);
+  --border-gold-glow: rgba(212, 175, 55, 0.75);
+  --border-glass: rgba(255, 255, 255, 0.07);
+
+  /* Typography Scales — Editorial Haute Horlogerie */
+  --font-display: 'Cinzel Decorative', 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-editorial: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-script: 'Great Vibes', 'Alex Brush', cursive;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --text-2xs: clamp(0.6875rem, 0.65rem + 0.15vw, 0.75rem);
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+  --text-sm: clamp(0.8125rem, 0.77rem + 0.3vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 0.88rem + 0.35vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.5vw, 1.3rem);
+  --text-xl: clamp(1.3rem, 1.2rem + 0.75vw, 1.625rem);
+  --text-2xl: clamp(1.6rem, 1.35rem + 1.2vw, 2.25rem);
+  --text-3xl: clamp(2.1rem, 1.7rem + 2vw, 3rem);
+  --text-4xl: clamp(2.8rem, 2rem + 3.5vw, 4.5rem);
+  --text-5xl: clamp(3.5rem, 2.5rem + 5vw, 6.5rem);
+
+  /* Spacing Scale */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6.5rem;
+
+  /* Architectural Radii — Crisp, refined luxury with intentional chamfers */
+  --radius-xs: 2px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows & Illuminations */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 28px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.75);
+  --shadow-royal: 0 16px 45px rgba(8, 2, 14, 0.85), 0 0 35px var(--color-gold-glow);
+  --shadow-glow-rose: 0 0 35px var(--color-rose-glow);
+  --shadow-glow-gold: 0 0 45px var(--color-gold-glow);
+
+  /* Glassmorphism Blur */
+  --glass-blur-sm: blur(10px);
+  --glass-blur-md: blur(20px);
+  --glass-blur-lg: blur(36px);
+
+  /* Authentic Cotton Paper Grain SVG (Inline data-URI noise texture) */
+  --paper-grain-texture: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+
+  /* Animation Timings */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce-soft: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 180ms;
+  --duration-medium: 380ms;
+  --duration-slow: 750ms;
+  --duration-cinematic: 1200ms;
+
+  /* Layering Z-Indexes */
+  --z-bg: 0;
+  --z-particles: 1;
+  --z-content: 10;
+  --z-ui-floating: 50;
+  --z-header: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+}

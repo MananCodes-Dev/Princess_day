@@ -1,0 +1,185 @@
+/* ==========================================================================
+   THE ROYAL EXPERIENCE — The 6 Theme Presets
+   Each theme defines a complete visual universe with distinct palettes,
+   borders, ornaments, glow styles, and ambient lighting.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   THEME 1: Enchanted Fairytale
+   Aesthetic: Mystical twilight grove, emerald moss & starlight gold, fairy dust.
+   -------------------------------------------------------------------------- */
+[data-theme="fairytale"] {
+  --bg-primary: #061510;
+  --bg-surface: rgba(9, 28, 22, 0.82);
+  --bg-surface-elevated: rgba(14, 40, 31, 0.9);
+  --bg-glass: rgba(184, 230, 205, 0.05);
+
+  --color-gold: #E5C365;
+  --color-gold-glow: rgba(229, 195, 101, 0.45);
+  --color-accent: #6ee7b7;
+  --color-accent-glow: rgba(110, 231, 183, 0.35);
+
+  --text-primary: #F4FAF6;
+  --text-secondary: #C3DCD0;
+  --text-muted: #85A796;
+  --text-accent: #A7F3D0;
+
+  --border-gold: rgba(229, 195, 101, 0.35);
+  --border-gold-subtle: rgba(110, 231, 183, 0.15);
+  --border-gold-glow: rgba(229, 195, 101, 0.7);
+
+  --theme-ambient-gradient: radial-gradient(circle at 50% 20%, rgba(20, 83, 60, 0.45) 0%, rgba(6, 21, 16, 0.95) 75%),
+                           radial-gradient(circle at 80% 80%, rgba(229, 195, 101, 0.15) 0%, transparent 50%);
+  --theme-ornament: "✦ 𑁍 ✦";
+  --theme-vibe: "Enchanted Fairytale";
+}
+
+/* --------------------------------------------------------------------------
+   THEME 2: Royal Luxury (Default Imperial Majesty)
+   Aesthetic: Sovereign deep burgundy, imperial velvet, champagne gold filigree.
+   -------------------------------------------------------------------------- */
+[data-theme="royal"] {
+  --bg-primary: #15050A;
+  --bg-surface: rgba(36, 10, 18, 0.85);
+  --bg-surface-elevated: rgba(56, 14, 27, 0.9);
+  --bg-glass: rgba(247, 231, 206, 0.05);
+
+  --color-gold: #D4AF37;
+  --color-gold-glow: rgba(212, 175, 55, 0.5);
+  --color-accent: #E8A598;
+  --color-accent-glow: rgba(232, 165, 152, 0.35);
+
+  --text-primary: #FDFBF7;
+  --text-secondary: #E4D5C5;
+  --text-muted: #A89585;
+  --text-accent: #F7E7CE;
+
+  --border-gold: rgba(212, 175, 55, 0.4);
+  --border-gold-subtle: rgba(212, 175, 55, 0.2);
+  --border-gold-glow: rgba(212, 175, 55, 0.8);
+
+  --theme-ambient-gradient: radial-gradient(circle at 50% 15%, rgba(94, 20, 36, 0.5) 0%, rgba(21, 5, 10, 0.98) 75%),
+                           radial-gradient(circle at 20% 85%, rgba(212, 175, 55, 0.18) 0%, transparent 60%);
+  --theme-ornament: "⚜ 👑 ⚜";
+  --theme-vibe: "Royal Luxury";
+}
+
+/* --------------------------------------------------------------------------
+   THEME 3: Celestial Princess
+   Aesthetic: Cosmic indigo, nebula radiance, constellation starlight, silver-blue.
+   -------------------------------------------------------------------------- */
+[data-theme="celestial"] {
+  --bg-primary: #080A1A;
+  --bg-surface: rgba(16, 21, 46, 0.85);
+  --bg-surface-elevated: rgba(24, 32, 70, 0.9);
+  --bg-glass: rgba(199, 210, 254, 0.05);
+
+  --color-gold: #F1D27E;
+  --color-gold-glow: rgba(241, 210, 126, 0.45);
+  --color-accent: #818CF8;
+  --color-accent-glow: rgba(129, 140, 248, 0.4);
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #7E8FA6;
+  --text-accent: #C7D2FE;
+
+  --border-gold: rgba(129, 140, 248, 0.35);
+  --border-gold-subtle: rgba(241, 210, 126, 0.2);
+  --border-gold-glow: rgba(129, 140, 248, 0.7);
+
+  --theme-ambient-gradient: radial-gradient(circle at 50% 10%, rgba(49, 46, 129, 0.55) 0%, rgba(8, 10, 26, 0.98) 75%),
+                           radial-gradient(circle at 85% 70%, rgba(129, 140, 248, 0.2) 0%, transparent 55%);
+  --theme-ornament: "✧ ★ ✧";
+  --theme-vibe: "Celestial Princess";
+}
+
+/* --------------------------------------------------------------------------
+   THEME 4: Romantic Garden
+   Aesthetic: Petal rose, champagne peach, blooming flora, dewy garden romance.
+   -------------------------------------------------------------------------- */
+[data-theme="garden"] {
+  --bg-primary: #17090C;
+  --bg-surface: rgba(38, 16, 21, 0.85);
+  --bg-surface-elevated: rgba(58, 24, 32, 0.9);
+  --bg-glass: rgba(254, 205, 211, 0.06);
+
+  --color-gold: #E8A598;
+  --color-gold-glow: rgba(232, 165, 152, 0.5);
+  --color-accent: #FDA4AF;
+  --color-accent-glow: rgba(253, 164, 175, 0.4);
+
+  --text-primary: #FFF1F2;
+  --text-secondary: #FBCFE8;
+  --text-muted: #A8818A;
+  --text-accent: #FECDD3;
+
+  --border-gold: rgba(232, 165, 152, 0.4);
+  --border-gold-subtle: rgba(253, 164, 175, 0.2);
+  --border-gold-glow: rgba(232, 165, 152, 0.8);
+
+  --theme-ambient-gradient: radial-gradient(circle at 50% 15%, rgba(136, 31, 56, 0.45) 0%, rgba(23, 9, 12, 0.98) 75%),
+                           radial-gradient(circle at 75% 85%, rgba(232, 165, 152, 0.2) 0%, transparent 55%);
+  --theme-ornament: "𑁍 🌸 𑁍";
+  --theme-vibe: "Romantic Garden";
+}
+
+/* --------------------------------------------------------------------------
+   THEME 5: Pastel Dream
+   Aesthetic: Ethereal lavender, mother-of-pearl iridescent opal, whimsical serenity.
+   -------------------------------------------------------------------------- */
+[data-theme="pastel"] {
+  --bg-primary: #12091A;
+  --bg-surface: rgba(31, 17, 43, 0.85);
+  --bg-surface-elevated: rgba(48, 26, 66, 0.9);
+  --bg-glass: rgba(233, 213, 255, 0.06);
+
+  --color-gold: #FBCFE8;
+  --color-gold-glow: rgba(251, 207, 232, 0.45);
+  --color-accent: #D8B4E2;
+  --color-accent-glow: rgba(216, 180, 226, 0.4);
+
+  --text-primary: #FAF5FF;
+  --text-secondary: #E9D5FF;
+  --text-muted: #9D84B0;
+  --text-accent: #F5D0FE;
+
+  --border-gold: rgba(216, 180, 226, 0.4);
+  --border-gold-subtle: rgba(251, 207, 232, 0.2);
+  --border-gold-glow: rgba(216, 180, 226, 0.8);
+
+  --theme-ambient-gradient: radial-gradient(circle at 50% 15%, rgba(88, 28, 135, 0.45) 0%, rgba(18, 9, 26, 0.98) 75%),
+                           radial-gradient(circle at 25% 85%, rgba(216, 180, 226, 0.22) 0%, transparent 60%);
+  --theme-ornament: "༓ 🫧 ༓";
+  --theme-vibe: "Pastel Dream";
+}
+
+/* --------------------------------------------------------------------------
+   THEME 6: Midnight Elegance
+   Aesthetic: Velvet noir, platinum silver, champagne starlight, haute couture.
+   -------------------------------------------------------------------------- */
+[data-theme="midnight"] {
+  --bg-primary: #09090C;
+  --bg-surface: rgba(20, 20, 26, 0.85);
+  --bg-surface-elevated: rgba(30, 30, 40, 0.9);
+  --bg-glass: rgba(255, 255, 255, 0.05);
+
+  --color-gold: #E2E8F0;
+  --color-gold-glow: rgba(226, 232, 240, 0.4);
+  --color-accent: #D4AF37;
+  --color-accent-glow: rgba(212, 175, 55, 0.4);
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD5E1;
+  --text-muted: #7E8694;
+  --text-accent: #F1E5C6;
+
+  --border-gold: rgba(212, 175, 55, 0.35);
+  --border-gold-subtle: rgba(255, 255, 255, 0.12);
+  --border-gold-glow: rgba(212, 175, 55, 0.7);
+
+  --theme-ambient-gradient: radial-gradient(circle at 50% 15%, rgba(30, 30, 45, 0.6) 0%, rgba(9, 9, 12, 0.98) 75%),
+                           radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.12) 0%, transparent 50%);
+  --theme-ornament: "❖ ✦ ❖";
+  --theme-vibe: "Midnight Elegance";
+}

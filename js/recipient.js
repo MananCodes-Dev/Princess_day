@@ -268,6 +268,8 @@ class RoyalRecipientJourney {
     let imageSrc = '';
     if (this.greeting.photoUrl) {
       imageSrc = this.greeting.photoUrl;
+    } else if (this.greeting.recipient && this.greeting.recipient.toLowerCase().includes('suhani')) {
+      imageSrc = 'assets/images/suhani.jpg';
     } else {
       const preset = PRESET_PORTRAITS.find(p => p.id === this.greeting.portraitId) || PRESET_PORTRAITS[0];
       imageSrc = preset.svg;

@@ -110,7 +110,7 @@ class RoyalSharingEngine {
         relationship: String(compact.rel || 'romantic'),
         theme: ROYAL_THEMES[compact.t] ? compact.t : (compact.t === 'garden' ? 'garden' : 'royal'),
         message: String(compact.m || ''),
-        photoUrl: compact.p && (compact.p.startsWith('http') || compact.p.startsWith('data:')) ? compact.p : '',
+        photoUrl: compact.p && (compact.p.startsWith('http') || compact.p.startsWith('data:') || compact.p.includes('/') || compact.p.endsWith('.jpg') || compact.p.endsWith('.png')) ? compact.p : '',
         portraitId: compact.p && PRESET_PORTRAITS.find(p => p.id === compact.p) ? compact.p : 'portrait-gold',
         virtues: Array.isArray(compact.v) && compact.v.length > 0 ? compact.v : [
           { icon: '✦', title: 'Radiant Laughter', desc: 'A joy so pure it illuminates every shadowed corner of this world.' },

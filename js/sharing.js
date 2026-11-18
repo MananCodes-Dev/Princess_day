@@ -11,6 +11,9 @@ class RoyalSharingEngine {
       let safePhoto = greeting.portraitId || 'portrait-gold';
       if (greeting.photoUrl && greeting.photoUrl.startsWith('http')) {
         safePhoto = greeting.photoUrl;
+      } else if (greeting.photoUrl && greeting.photoUrl.startsWith('assets/')) {
+        // Relative asset paths (e.g. assets/images/suhani.jpg) are short — safe to encode
+        safePhoto = greeting.photoUrl;
       }
 
       // Build ultra-compact object by omitting default boilerplate

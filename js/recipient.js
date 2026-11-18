@@ -266,9 +266,11 @@ class RoyalRecipientJourney {
     if (!el) return;
 
     let imageSrc = '';
+    const recipientLower = (this.greeting.recipient || '').trim().toLowerCase();
     if (this.greeting.photoUrl) {
       imageSrc = this.greeting.photoUrl;
-    } else if (this.greeting.recipient && this.greeting.recipient.toLowerCase().includes('suhani')) {
+    } else if (recipientLower.includes('suhani')) {
+      // Dedicated photo for Suhani — always use the hosted portrait
       imageSrc = 'assets/images/suhani.jpg';
     } else {
       const preset = PRESET_PORTRAITS.find(p => p.id === this.greeting.portraitId) || PRESET_PORTRAITS[0];
@@ -292,7 +294,7 @@ class RoyalRecipientJourney {
           <div class="photo-mount-corner mount-br"></div>
 
           <div class="archival-image-frame">
-            <img src="${imageSrc}" alt="Imperial Folio of ${this.escapeHtml(this.greeting.recipient)}" loading="lazy" />
+            <img src="${imageSrc}" alt="Imperial Folio of ${this.escapeHtml(this.greeting.recipient)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:4px;" onerror="this.onerror=null;this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div style=\'display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:linear-gradient(135deg,#f5e6c8,#e8d5a3);border-radius:4px;\'><svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 120 120\' width=\'80\' height=\'80\'><circle cx=\'60\' cy=\'45\' r=\'28\' fill=\'#c8a96e\' opacity=\'.7\'/><ellipse cx=\'60\' cy=\'105\' rx=\'42\' ry=\'30\' fill=\'#c8a96e\' opacity=\'.5\'/></svg></div>')" />
           </div>
 
           <div class="archival-caption-box">

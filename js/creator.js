@@ -459,6 +459,27 @@ class RoyalCreatorStudio {
       }
     }
 
+    // Shorten Link Button
+    const shortenBtn = document.getElementById('btn-modal-shorten');
+    if (shortenBtn) {
+      shortenBtn.onclick = async () => {
+        shortenBtn.textContent = 'Shortening...';
+        shortenBtn.disabled = true;
+        const short = await RoyalSharingEngine.shortenUrl(activeUrl);
+        shortenBtn.disabled = false;
+        if (short) {
+          activeUrl = short;
+          if (linkInput) linkInput.value = activeUrl;
+          updateQR(activeUrl);
+          shortenBtn.textContent = '✓ Link Shortened';
+          this.showToast('Tiny short link created! ✦');
+        } else {
+          shortenBtn.textContent = 'Shorten Failed';
+          setTimeout(() => { shortenBtn.textContent = '✦ Shorten Link'; }, 2000);
+        }
+      };
+    }
+
     // Copy Button
     const copyBtn = document.getElementById('btn-modal-copy');
     if (copyBtn) {

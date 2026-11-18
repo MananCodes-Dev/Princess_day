@@ -186,6 +186,23 @@ class RoyalSharingEngine {
     return false;
   }
 
+  // Automatic free URL shortener (TinyURL)
+  static async shortenUrl(longUrl) {
+    try {
+      const endpoint = `https://tinyurl.com/api-create.php?url=${encodeURIComponent(longUrl)}`;
+      const res = await fetch(endpoint);
+      if (res.ok) {
+        const shortUrl = (await res.text()).trim();
+        if (shortUrl.startsWith('http')) {
+          return shortUrl;
+        }
+      }
+    } catch (e) {
+      console.warn('URL shortener fallback:', e);
+    }
+    return null;
+  }
+
   // Generate 100% Real, Standard Scannable QR Code SVG
   static generateQRCodeSVG(text) {
     try {
